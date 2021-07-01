@@ -1,0 +1,48 @@
+/* from 0px - 1000px */
+@media only screen and (max-width: 1000px) {
+
+    .navigation .logo{
+        padding: 15px 15px;
+        width: 160px;
+    }
+
+    .navigation li a {
+        font-size: 80%;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        background-repeat: no-repeat;
+    }
+
+    .collapsing,
+    .show {
+    margin-left: 40%;
+    margin-right: 30%;
+    margin-top: -150px;
+    }
+
+    #about-bg-diagonal { display: none; }
+
+    .navigation.fixed-nav .logo{
+        width: 90px;
+        margin-top: -25px;
+        margin-left: -20px;
+        margin-bottom: -25px;
+    }
+    
+    .navigation.fixed-nav button {
+        margin-top: -15px;
+        margin-right: 0;
+        margin-bottom: -25px;
+    }
+    
+    .navigation.fixed-nav li a { font-size: 75%; }
+    
+    .navigation.fixed-nav .collapsing,
+    .navigation.fixed-nav .show { margin-top: -55px; }
+
+    .navbar-toggler-icon { background-size: 80%; }
+
+}

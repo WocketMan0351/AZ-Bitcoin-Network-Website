@@ -1,0 +1,621 @@
+/*-----------------------------------------------------*/
+/* BASIC SETUP */
+/*-----------------------------------------------------*/
+
+/* 
+black text color: #444
+white background: rgb(240, 240, 240);
+BTC orange color: #e67e22 
+az bitcoin light orange: #ffc107
+az bitcoin dark orange: #fd7e14
+az bitcoin red: #dc3545
+*/
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loader .inner {
+  width: 100%;
+  height: 100%;
+  background: url(../img/preloader.gif) center center no-repeat;
+}
+
+/*-----------------------------------------------------*/
+/* HOME ("slides") */
+/*-----------------------------------------------------*/
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title-msg {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  margin-top: -125px;
+  top: 50%;
+  z-index: 5;
+  color: white;
+  text-align: center;
+}
+
+.main {
+  font-size: 250%;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+  font-weight: 200;
+  letter-spacing: 7px;
+}
+
+.sub {
+  font-size: 175%;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9);
+  font-weight: 350;
+  letter-spacing: 5px;
+}
+
+.ticker {
+  position: absolute;
+  width: 20%;
+  top: 84%;
+  color: white;
+  z-index: 6;
+  border: none;
+}
+
+/*-----------------------------------------------------*/
+/* NAVIGATION */
+/*-----------------------------------------------------*/
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  text-decoration: none;
+}
+
+.nagivation li {
+  padding: 0;
+}
+
+.navigation li a {
+  color: white;
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+.navigation li a:hover,
+.navigation li a:active {
+  color: #fd7e14;
+}
+
+.collapsing,
+.show {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: -150px;
+}
+
+.navigation .logo {
+  width: 150px;
+  margin: 0;
+}
+
+.navbar-toggler-icon {
+  background: url(../img/icons/menu.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+button {
+  color: transparent;
+  margin-right: 25px;
+}
+
+.navbar-nav li {
+  width: 35%;
+}
+
+/*-----------------------------------------------------*/
+/* STICKY NAV */
+/*-----------------------------------------------------*/
+
+.navigation.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url(../img/about.jpg);
+  background-size: 1100px 1100px;
+  z-index: 100;
+}
+
+.navigation.fixed-nav .logo {
+  width: 100px;
+}
+
+.navigation.fixed-nav .collapsing,
+.navigation.fixed-nav .show {
+  margin-top: -105px;
+  z-index: 100;
+}
+
+/*-----------------------------------------------------*/
+/* TOPICS */
+/*-----------------------------------------------------*/
+
+#topics {
+  background-color: rgb(240, 240, 240);
+  color: #444;
+}
+
+#topics i {
+  color: #fd7e14;
+}
+
+#topics .container .header {
+  text-align: center;
+}
+
+#topics .container .header:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#topics h5 {
+  display: inline;
+}
+
+/*-----------------------------------------------------*/
+/* ABOUT US */
+/*-----------------------------------------------------*/
+
+#about #about-text {
+  margin: 15% 15%;
+  color: #444;
+}
+
+#about-text .header {
+  text-align: center;
+}
+
+#about-text .header:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: #3498db;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #3498db;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  color: white;
+  border: 1px white;
+  background-color: #3498db;
+}
+
+.button-box {
+  text-align: center;
+}
+
+#about-pic-box {
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+}
+
+.about-pic {
+  width: 130%;
+}
+
+#about-bg-diagonal {
+  width: 55%;
+  height: 700px;
+  float: right;
+  background-image: url('../img/about.jpg');
+  border-left: 600px solid white;
+  border-top: 700px solid transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*-----------------------------------------------------*/
+/* EVENTS */
+/*-----------------------------------------------------*/
+
+#events {
+  margin-top: 50px;
+  background-color: rgb(240, 240, 240);
+  color: #3498db;
+  padding: 50px 40px;
+}
+
+#events .container .header {
+  text-align: center;
+}
+
+#events .container .header:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#events a {
+  font-size: inherit;
+  color: #fd7e14;
+}
+
+#events a:hover {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#events .container h5:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#events .previous-box,
+#events .next-box {
+  background-color: white;
+  border-radius: 8px;
+  margin: 0 10px;
+  font-size: 80%;
+  margin-top: 15px;
+}
+
+#events .previous-box h5,
+#events .next-box h5 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*-----------------------------------------------------*/
+/* MERCHANTS */
+/*-----------------------------------------------------*/
+
+#merchants {
+  color: #444;
+}
+
+#merchants .header h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#merchants .header h2:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.merchant {
+  padding-top: 10px;
+  margin: 10px 10px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+}
+
+/*-----------------------------------------------------*/
+/* APPS */
+/*-----------------------------------------------------*/
+
+#apps {
+  color: #3498db;
+  background-color: rgb(240, 240, 240);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#apps .header h2 {
+  text-align: center;
+}
+
+#apps .header h2:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.app {
+  margin: 0 10px;
+}
+
+#apps-list h5 {
+  text-align: center;
+  font-size: 90%;
+}
+
+.app-img {
+  border-radius: 10px;
+}
+
+.app p {
+  font-size: 70%;
+}
+
+/*-----------------------------------------------------*/
+/* STORE */
+/*-----------------------------------------------------*/
+
+/* #store {
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.4), hsla(0, 0%, 0%, 0.4)), url(../img/about.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.store-msg p {
+  color: white;
+  text-align: center;
+  padding: 15% 15% 0 15%;
+  font-size: 200%;
+}
+
+.store-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.store-button a {
+  color: white;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px #e67e22;
+  background-color: #e67e22;
+}
+
+.store-button h2 {
+  color: white;
+  text-align: center;
+  font-size: 125%;
+  padding: 0 15% 0 15%;
+  margin-top: 20px;
+} */
+
+/*-----------------------------------------------------*/
+/* POS */
+/*-----------------------------------------------------*/
+
+#pos {
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
+    url(../img/bitcoinaccepted.jpeg);
+  background-size: cover;
+  height: 700px;
+}
+
+.pos-msg p {
+  z-index: 100;
+  color: white;
+  text-align: center;
+  padding: 15% 15% 0 15%;
+  font-size: 200%;
+}
+
+.pos-contact {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.pos-contact h2 {
+  z-index: 100;
+  font-size: 120%;
+}
+
+.pos-contact a {
+  color: white;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  text-decoration: none;
+  color: white;
+  border: 1px #e67e22;
+  background-color: #e67e22;
+}
+
+#pos p {
+  margin-top: 10px;
+}
+
+/*-----------------------------------------------------*/
+/* TUSCON BITCOIN */
+/*-----------------------------------------------------*/
+
+#tuscon {
+  background-color: rgb(240, 240, 240);
+  color: #444;
+}
+
+#tuscon h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#tuscon h2:after {
+  display: block;
+  height: 2px;
+  background-color: #fd7e14;
+  content: ' ';
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.tuscon-button {
+  color: #e67e22;
+  font-weight: 500;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 0px;
+  border: 1px solid #e67e22;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.tuscon-button:hover {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #e67e22;
+  background-color: #e67e22;
+}
+
+.podcast {
+  text-align: center;
+}
+
+.alex {
+  text-align: center;
+}
+
+/*-----------------------------------------------------*/
+/* FOOTER */
+/*-----------------------------------------------------*/
+
+.footer {
+  width: 100%;
+  background-image: url(../img/about.jpg);
+  background-size: 1100px 1100px;
+  color: white;
+}
+
+.footer h5 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  list-style: none;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.social-links li i {
+  color: white;
+  font-size: 150%;
+}
+
+.social-links li i:hover {
+  color: #3498db;
+}
+
+.footer .boxes {
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: #e67e22;
+}
+
+.footer i {
+  color: #e67e22;
+}
+
+.btc-pay-img {
+  width: 140px;
+}
+
+/*-----------------------------------------------------*/
+/* ANIMATIONS */
+/*-----------------------------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-4,
+.js--wp-5,
+.js--wp-7 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.js--wp-1.is-visible,
+.js--wp-2.is-visible,
+.js--wp-4.is-visible,
+.js--wp-5.is-visible,
+.js--wp-7.is-visible {
+  opacity: 1;
+}
